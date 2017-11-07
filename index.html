@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <script src='jquery-3.2.1.js'></script>
+  <title>Exercice 2</title>
+</head>
+<body>
+  <form>
+    <input type='text' name='marks1' textue="" id='marks1'>Entrez vos notes
+    <input type='text' name='marks2' textue=""id='marks2'>Entrez vos notes
+    <input type='text' name='marks3' textue="" id='marks3'>Entrez vos notes
+    <input type='text' name='marks4' textue="" id='marks4'>Entrez vos notes
+    <input type='text' name='marks5' textue="" id='marks5'>Entrez vos notes
+    <button type='button' name='button' id='btn'>Calcluler la moyenne</button>
+  </form>
+  <script>
+  var veryBadMark = 0;
+  var averageMark = 10;
+  var quiteGoodMark = 13;
+  var goodMark = 16;
+  var excellentMark = 20;
+  mark1 = $("#marks1").val();
+  mark2 = $("#marks2").val();
+  mark3 = $("#marks3").val();
+  mark4 = $("#marks4").val();
+  mark5 = $("#marks5").val();
+  var average = ((Number(mark1) + Number(mark2) + Number(mark3) + Number(mark4) + Number(mark5))/5);
+  console.log(average);
+  $("#btn").click(function (){
+    if (average >= veryBadMark && average < averageMark) {
+      console.log('average')
+      alert('Tu as '+average+' de moyenne, c\'est en dessous de la moyenne')
+      return false;
+    }
+    if (average >= averageMark && average < quiteGoodMark) {
+      console.log('average')
+      alert('Tu as '+average+' de moyenne, c\'est moyen')
+      return false;
+    }
+    if (average >= quiteGoodMark && average < goodMark) {
+      console.log('average')
+      alert('Tu as '+average+' de moyenne, c\'est bien')
+      return false;
+    }
+    if (average >= goodMark && average < excellentMark) {
+      console.log('average')
+      alert('Tu as '+average+' de moyenne, c\'est très bien')
+      return false;
+    }
+    if (average == excellentMark) {
+      console.log('average')
+      alert('Tu as '+average+' de moyenne, c\'est excellent')
+      return false;
+    }
+  });
+  </script>
+</body>
+</html>
